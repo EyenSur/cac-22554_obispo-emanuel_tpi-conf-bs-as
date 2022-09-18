@@ -7,4 +7,4 @@ Obispo Emanuel
 <br>
 Trabajo Práctico Integrador
 <br>
-Conf Bs. As.
+Front End - Conf Bs. As.
