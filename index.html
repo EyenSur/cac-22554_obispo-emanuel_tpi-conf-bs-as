@@ -293,7 +293,33 @@
     Conviertete en un orador
     ------------------------------
     -->
-    <div class="container-fluid oradorForm mb-3">
+
+    <div class="container-fluid oradorFormSmall d-block d-md-none mb-3">
+        <div class="row text-center mb-3">
+            <p class="conoceConv">CONVIÉRTETE EN UN</p>
+            <h2>ORADOR</h2> 
+            <p>
+                Anótate como orador para dar una <span class="dotLine">charla ignite</span>. Cuéntanos de qué quieres hablar!
+            </p>
+        </div>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Apellido">
+            </div>
+            <div class="col-12">
+                <textarea class="form-control form-control-lg" placeholder="Sobre qué quieres hablar?" rows="3"></textarea>
+                <div class="form-text">Recuerda incluir un título para tu charla.</div>
+            </div>
+            <div class="col-12 d-grid buttonEnviar rounded">
+                <button class="btn text-light fw-bold" type="button">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid oradorFormMedium d-none d-md-block mb-3">
         <div class="row text-center mb-3">
             <p class="conoceConv">CONVIÉRTETE EN UN</p>
             <h2>ORADOR</h2> 

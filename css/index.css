@@ -121,7 +121,11 @@ a:hover {
     background-color: #96C93E;
 }
 
-.oradorForm {
+.oradorFormSmall {
+    max-width: 80%;
+}
+
+.oradorFormMedium {
     max-width: 60%;
 }
 
