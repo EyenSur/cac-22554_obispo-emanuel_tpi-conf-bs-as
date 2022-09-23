@@ -31,7 +31,7 @@
     ------------------------------
     -->
 
-    <!-- Nav. for screens ≤ Small -->
+    <!-- Resolución de pantalla ≤ Small -->
     <nav class="navbar smallNav d-block d-md-none fixed-top">
         <div class="container-fluid justify-content-center navContainer">
 
@@ -74,13 +74,13 @@
     </nav>
 
 
-    <!-- Nav. for screens ≥ Medium -->
+    <!-- Resolución de pantalla ≥ Medium -->
     <nav class="navbar mediumNav navbar-expand-md d-none d-md-block d-lg-none fixed-top">
         <div class="container-fluid navContainer">
 
             <!-- Nav. Logo -->
             <a class="navbar-brand"><img src="img/codoacodo.png" width="80px" alt="Codo a Codo">
-                <span class="navbar-text d-none d-md-inline text-light textConfBsAs">Conf Bs As</span>
+                <span class="navbar-text text-light textConfBsAs">Conf Bs As</span>
             </a>
 
             <!-- Nav. Button -->
@@ -114,13 +114,13 @@
         </div>
     </nav>
 
-    <!-- Nav. for screens ≥ Large -->
-    <nav class="navbar largeNav navbar-expand-lg d-none d-lg-block fixed-top">
+    <!-- Resolución de pantalla ≥ Large -->
+    <nav class="navbar largeNav navbar-expand-lg d-none d-lg-block d-xl-none fixed-top">
         <div class="container-fluid navContainer">
 
             <!-- Nav. Logo -->
             <a class="navbar-brand"><img src="img/codoacodo.png" width="80px" alt="Codo a Codo">
-                <span class="navbar-text d-none d-lg-inline text-light textConfBsAs">Conf Bs As</span>
+                <span class="navbar-text text-light textConfBsAs">Conf Bs As</span>
             </a>
 
             <!-- Nav. Button -->
@@ -154,13 +154,13 @@
         </div>
     </nav>
 
-    <!-- Nav. for screens ≥ Large -->
+    <!-- Resolución de pantalla ≥ Extra Large -->
     <nav class="navbar bigNav navbar-expand-xl d-none d-xl-block fixed-top">
         <div class="container-fluid navContainer">
 
             <!-- Nav. Logo -->
             <a class="navbar-brand"><img src="img/codoacodo.png" width="80px" alt="Codo a Codo">
-                <span class="navbar-text d-none d-xl-inline text-light textConfBsAs">Conf Bs As</span>
+                <span class="navbar-text text-light textConfBsAs">Conf Bs As</span>
             </a>
 
             <!-- Nav. Button -->
@@ -189,9 +189,8 @@
                     </li>
                 </ul>
             </div>
-
-        <!-- Close -->
         </div>
+        <!-- Close -->
     </nav>
 
 
@@ -203,7 +202,7 @@
     -->
     <main class="introBox container-fluid align-middle">
         <div class="row d-flex flex-row-reverse">
-            <div class="introTexto text-light text-center text-md-end col-md-6 me-md-5">
+            <div class="text-light text-center text-md-end col-md-5 me-md-4">
                 <h1>Conf Bs As</h1>
                 <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
                 <p>
@@ -293,7 +292,7 @@
     Conviertete en un orador
     ------------------------------
     -->
-    <div class="oradorForm container mb-3">
+    <div class="container-fluid form mb-3">
         <div class="row text-center mb-3">
             <p class="conoceConv">CONVIÉRTETE EN UN</p>
             <h2>ORADOR</h2> 
@@ -312,8 +311,8 @@
                 <textarea class="form-control form-control-lg" placeholder="Sobre qué quieres hablar?" rows="3"></textarea>
                 <div class="form-text">Recuerda incluir un título para tu charla.</div>
             </div>
-            <div class="col-12 d-grid">
-                <button class="btn buttonSend" type="button">Enviar</button>
+            <div class="col-12 d-grid buttonEnviar rounded">
+                <button class="btn text-light fw-bold" type="button">Enviar</button>
             </div>
         </div>
     </div>
@@ -325,14 +324,113 @@
     Pie de página
     ------------------------------
     -->
-    <div class="footer container-fluid text-center d-flex justify-content-center">
-        <a class="nav-link" href="#">Preguntas<br>frecuentes</a>
-        <a class="nav-link" href="#">Contáctanos</a>
-        <a class="nav-link" href="#">Prensa</a>
-        <a class="nav-link" href="#">Conferencias</a>
-        <a class="nav-link" href="#">Términos y<br>condiciones</a>
-        <a class="nav-link" href="#">Privacidad</a>
-        <a class="nav-link" href="#">Estudiantes</a>
+
+    <!-- Resolución de pantalla ≥ Small -->
+    <div class="footer container-fluid d-block d-md-none">
+        <ul class="navbar-nav list-group-horizontal justify-content-center align-items-center">
+            <li class="footListSmall">
+                <a class="nav-link px-4" href="#">Preguntas<br>frecuentes</a>
+            </li>
+            <li class="footListSmall">
+                <a class="nav-link px-4" href="#">Contáctanos</a>
+            </li>
+            <li class="footListSmall">
+                <a class="nav-link px-4" href="#">Prensa</a>
+            </li>
+            <li class="footListSmall">
+                <a class="nav-link px-4" href="#">Conferencias</a>
+            </li>
+            <li class="footListSmall">
+                <a class="nav-link px-4" href="#">Términos y<br>condiciones</a>
+            </li>
+            <li class="footListSmall">
+                <a class="nav-link px-4" href="#">Privacidad</a>
+            </li>
+            <li class="footListSmall">
+                <a class="nav-link px-4" href="#">Estudiantes</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Resolución de pantalla ≥ Medium -->
+    <div class="footer container-fluid d-none d-md-block d-lg-none">
+        <ul class="navbar-nav list-group-horizontal justify-content-center align-items-center">
+            <li class="footListMedium">
+                <a class="nav-link px-4" href="#">Preguntas<br>frecuentes</a>
+            </li>
+            <li class="footListMedium">
+                <a class="nav-link px-4" href="#">Contáctanos</a>
+            </li>
+            <li class="footListMedium">
+                <a class="nav-link px-4" href="#">Prensa</a>
+            </li>
+            <li class="footListMedium">
+                <a class="nav-link px-4" href="#">Conferencias</a>
+            </li>
+            <li class="footListMedium">
+                <a class="nav-link px-4" href="#">Términos y<br>condiciones</a>
+            </li>
+            <li class="footListMedium">
+                <a class="nav-link px-4" href="#">Privacidad</a>
+            </li>
+            <li class="footListMedium">
+                <a class="nav-link px-4" href="#">Estudiantes</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Resolución de pantalla ≥ Large -->
+    <div class="footer container-fluid d-none d-lg-block d-xl-none">
+        <ul class="navbar-nav list-group-horizontal justify-content-center align-items-center">
+            <li class="footListLarge px-4">
+                <a class="nav-link" href="#">Preguntas<br>frecuentes</a>
+            </li>
+            <li class="footListLarge px-4">
+                <a class="nav-link" href="#">Contáctanos</a>
+            </li>
+            <li class="footListLarge px-4">
+                <a class="nav-link" href="#">Prensa</a>
+            </li>
+            <li class="footListLarge px-4">
+                <a class="nav-link" href="#">Conferencias</a>
+            </li>
+            <li class="footListLarge px-4">
+                <a class="nav-link" href="#">Términos y<br>condiciones</a>
+            </li>
+            <li class="footListLarge px-4">
+                <a class="nav-link" href="#">Privacidad</a>
+            </li>
+            <li class="footListLarge px-4">
+                <a class="nav-link" href="#">Estudiantes</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Resolución de pantalla ≥ Extra Large -->
+    <div class="footer container-fluid d-none d-xl-block">
+        <ul class="navbar-nav list-group-horizontal justify-content-center align-items-center">
+            <li class="footListBig">
+                <a class="nav-link px-5" href="#">Preguntas<br>frecuentes</a>
+            </li>
+            <li class="footListLarge">
+                <a class="nav-link px-5" href="#">Contáctanos</a>
+            </li>
+            <li class="footListLarge">
+                <a class="nav-link px-5" href="#">Prensa</a>
+            </li>
+            <li class="footListLarge">
+                <a class="nav-link px-5" href="#">Conferencias</a>
+            </li>
+            <li class="footListLarge">
+                <a class="nav-link px-5" href="#">Términos y<br>condiciones</a>
+            </li>
+            <li class="footListLarge">
+                <a class="nav-link px-5" href="#">Privacidad</a>
+            </li>
+            <li class="footListLarge">
+                <a class="nav-link px-5" href="#">Estudiantes</a>
+            </li>
+        </ul>
     </div>
 
 
