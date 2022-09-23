@@ -121,7 +121,7 @@ a:hover {
     background-color: #96C93E;
 }
 
-.form {
+.oradorForm {
     max-width: 60%;
 }
 
@@ -132,11 +132,12 @@ a:hover {
 
 .footer {
     background-image: linear-gradient(to right, #1C3643, #1E5372);
-    max-width: 100%;
+    height: fit-content;
+    padding: 0.7rem 0rem;
 }
 
 .footListSmall a {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     color: white;
 }
 
@@ -154,7 +155,6 @@ a:hover {
     font-size: 1.2rem;
     color: white;
 }
-
 
 .footListSmall a:hover, .footListMedium a:hover, .footListLarge a:hover, .footListBig a:hover {
     color: white;
