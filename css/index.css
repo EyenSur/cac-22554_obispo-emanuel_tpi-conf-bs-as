@@ -16,15 +16,21 @@ a:hover {
 
 /* BARRA DE NAVEGACIÓN */
 
-.container-fluid {
-    display: inline-block;
+.navContainer {
+    display: inline;
     position: relative;
 }
 
 .smallNav {
-    min-height: 4.4rem;
+    position: relative;
+    min-height: 2.5rem;
     padding: 0rem;
     background-color: #353A40;
+}
+
+.buttonNav {
+    position: absolute;
+    top: -0.7rem;
 }
 
 .mediumNav {
@@ -89,39 +95,43 @@ a:hover {
 
 /* INTRODUCCIÓN */
 
-.introBox{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/ba1.jpg");
+.introBox {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/ba1.jpg");
     background-size: cover;
     background-position: center;
-    height: 600px;
+    height: 34rem;
     display: flex;
     align-items: center;
 }
 
-.dotLine{
+.conoceConv {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.imgHono {
+    height: 25rem;
+}
+
+.buttonSend {
+    background-color: #96C93E;
+}
+
+.oradorForm {
+    width: 100%;
+}
+
+.dotLine {
     text-decoration: underline;
     text-decoration-style: dotted;
 }
 
-.form{
-    max-width: 800px;
+.footer {
+    background-image: linear-gradient(to right, #1C3643, #1E5372);
 }
 
-.footer{
-    background-color: rgb(16, 64, 80);
-    color: rgb(255, 255, 255);
-}
-
-.btn-green{
-    background-color: rgb(54, 168, 69);
-    color: rgb(255, 255, 255);
-}
-
-.btn-green-light{
-    background-color: rgb(118, 199, 64);
-    color: rgb(255, 255, 255);
-}
-
-.text-green{
-    color: rgb(54, 168, 69);
+.footer a {
+    color: white;
+    font-size: 1rem;
+    vertical-align: middle;
 }
