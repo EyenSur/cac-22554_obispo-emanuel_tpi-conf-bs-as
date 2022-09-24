@@ -1,7 +1,7 @@
-# CaC - Trabajo Práctico Integral
-Codo a Codo - Comisión #22554
-<br>
+# Codo a Codo - Trabajo Práctico Integral
 Obispo Emanuel
+<br>
+Comisión #22554
 <br>
 TPI: Front End - Conf Bs As
 <br><br>
