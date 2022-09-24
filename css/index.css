@@ -160,6 +160,9 @@ a:hover {
     color: white;
 }
 
-.footListSmall a:hover, .footListMedium a:hover, .footListLarge a:hover, .footListBig a:hover {
+.footListSmall a:hover,
+.footListMedium a:hover,
+.footListLarge a:hover,
+.footListBig a:hover {
     color: white;
 }
