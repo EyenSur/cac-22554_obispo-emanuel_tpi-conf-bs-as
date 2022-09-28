@@ -7,4 +7,4 @@ Año 2022
 <br>
 TPI: Front End - Conf Bs As
 <br><br>
-[Vista Previa](https://eyensur.github.io/cac-22554_obispo-emanuel_tpi-fe-conf-bs-as/)
+[Vista Previa](https://ObiQui.github.io/cac-22554_obispo-emanuel_tpi-fe-conf-bs-as/)
