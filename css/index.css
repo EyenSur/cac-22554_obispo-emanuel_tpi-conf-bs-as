@@ -35,59 +35,69 @@ a:hover {
 
 .mediumNav {
     height: 3rem;
-    padding: 2rem;
+    padding: 0rem;
     background-color: #353A40;
 }
 
 .largeNav {
-    height: 4rem;
-    padding: 5rem;
+    height: 3.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
     background-color: #353A40;
 }
 
 .bigNav {
     height: 4rem;
-    padding: 5rem;
+    padding: 4rem;
     background-color: #353A40;
 }
 
 .smallNav a {
     font-size: 0.9rem;
-    margin-top: -0.5rem;
+    margin-top: -0.7rem;
 }
 
 .mediumNav a {
-    font-size: 0.7rem;
+    font-size: 0.87rem;
     margin-top: -0.7rem;
 }
 
 .largeNav a {
-    font-size: 0.9rem;
-    margin-top: -0.3rem;
+    font-size: 1.1rem;
+    margin-top: -0.5rem;
 }
 
 .bigNav a {
     font-size: 1.2rem;
-    margin-top: -0.2rem;
+    margin-top: -0.3rem;
 }
 
 .navbar a:hover {
     color: white;
 }
 
-.navbar-collapse {
+.smallNavBG {
     background-color: #353A40;
+    max-width: 12rem;
+    margin-top: 2rem;
+}
+
+.smallNavBorder {
+    padding-left: 0.75rem;
+    border-top: black;
+    border-style: solid;
+    border-width: 0.1rem;
 }
 
 .nav-item a {
     color: darkgray;
 }
 
-.navbar-text {
-    color: white;
+.nav-item a:hover {
+    color: gold;
 }
 
-.nav-item a:hover {
+.laConferencia a {
     color: white;
 }
 
@@ -103,8 +113,8 @@ a:hover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/ba1.jpg");
     background-size: cover;
     background-position: center;
-    height: 34rem;
     display: flex;
+    height: 34rem;
     align-items: center;
 }
 
