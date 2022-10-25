@@ -173,7 +173,7 @@ function _mostrarResumen() {
     localStorage.setItem("cantidad", _resCantidad.innerHTML);
     localStorage.setItem("precio", _resPrecio.innerHTML);
 
-    window.open("resumenTicket.html", '_blank');
+    window.open("resumen.html", '_blank');
 
     /*
     if (_cajaResumen.style.display === 'none') {
@@ -200,10 +200,3 @@ _inputCantidad.onkeyup = _reescribirDatos;
 
 // Agregar texto a la etiqueta title, de esta forma me permite hacer que el texto tenga un salto de linea
 _inputCantidad.title = `La duración de la conferencia es de 3 días.\nSeleccione la cantidad de días que su ticket será válido.`;
-
-
-
-
-
-
-localStorage.getItem("lastname");
