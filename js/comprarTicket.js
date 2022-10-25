@@ -174,15 +174,6 @@ function _mostrarResumen() {
     localStorage.setItem("precio", _resPrecio.innerHTML);
 
     window.open("resumen.html", '_blank');
-
-    /*
-    if (_cajaResumen.style.display === 'none') {
-        _cajaResumen.style.display = 'block';
-
-    } else {
-        _cajaResumen.style.display = 'none';
-    }
-    */
 }
 
 

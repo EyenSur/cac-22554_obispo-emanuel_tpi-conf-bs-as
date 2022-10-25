@@ -1,7 +1,29 @@
 #resumenBox {
-    border: 0.4rem double #97c93e;
-    padding: 1rem;
-    width: fit-content;
+    border: 0.4rem double #006bcf;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    margin: 1rem;
+    min-width: 50%;
+    max-width: fit-content;
     font-weight: 600;
     color: #222222;
+}
+
+#barra {
+    height: 0.3rem;
+    background-color: #003f7a;
+    border: none;
+    border-radius: 5rem;
+}
+
+.row {
+    padding-top: -0.5rem;
+    padding-bottom: -0.5rem;
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+}
+
+.firstline {
+    padding-top: 1rem;
 }
