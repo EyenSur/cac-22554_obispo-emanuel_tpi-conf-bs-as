@@ -152,15 +152,15 @@ function _reiniciarPrecio() {
 
 function _mostrarResumen() {
 
-    localStorage.setItem("evento", `${_eventoNombre}`);
-    localStorage.setItem("lugar", `${_eventoLugar}`);
-    localStorage.setItem("fecha", `${_eventoFecha}`);
-    localStorage.setItem("nombre", `${_inputNombre.value}`);
-    localStorage.setItem("apellido", `${_inputApellido.value}`);
-    localStorage.setItem("correo", `${_inputCorreo.value}`);
-    localStorage.setItem("categoria", `${_nombreCateg}`);
-    localStorage.setItem("cantidad", `${_inputCantidad.value} ${_diaDias}`);
-    localStorage.setItem("precio", `$${_totalPagar}`);
+    localStorage.setItem("guardar_evento", `${_eventoNombre}`);
+    localStorage.setItem("guardar_lugar", `${_eventoLugar}`);
+    localStorage.setItem("guardar_fecha", `${_eventoFecha}`);
+    localStorage.setItem("guardar_nombre", `${_inputNombre.value}`);
+    localStorage.setItem("guardar_apellido", `${_inputApellido.value}`);
+    localStorage.setItem("guardar_correo", `${_inputCorreo.value}`);
+    localStorage.setItem("guardar_categoria", `${_nombreCateg}`);
+    localStorage.setItem("guardar_cantidad", `${_inputCantidad.value} ${_diaDias}`);
+    localStorage.setItem("guardar_precio", `$${_totalPagar}`);
 
     window.open("resumen.html", '_blank');
 }

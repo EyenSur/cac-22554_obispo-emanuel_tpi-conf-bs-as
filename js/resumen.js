@@ -18,12 +18,12 @@ let _resPrecio = document.getElementById("res_precio");
 //////////////////////////////////////////////////
 // PRINCIPAL
 
-_resEvento.innerHTML = localStorage.getItem("evento");
-_resLugar.innerHTML = localStorage.getItem("lugar");
-_resFecha.innerHTML = localStorage.getItem("fecha");
-_resNombre.innerHTML = localStorage.getItem("nombre");
-_resApellido.innerHTML = localStorage.getItem("apellido");
-_resCorreo.innerHTML = localStorage.getItem("correo");
-_resCategoria.innerHTML = localStorage.getItem("categoria");
-_resCantidad.innerHTML = localStorage.getItem("cantidad");
-_resPrecio.innerHTML = localStorage.getItem("precio");
+_resEvento.innerHTML = localStorage.getItem("guardar_evento");
+_resLugar.innerHTML = localStorage.getItem("guardar_lugar");
+_resFecha.innerHTML = localStorage.getItem("guardar_fecha");
+_resNombre.innerHTML = localStorage.getItem("guardar_nombre");
+_resApellido.innerHTML = localStorage.getItem("guardar_apellido");
+_resCorreo.innerHTML = localStorage.getItem("guardar_correo");
+_resCategoria.innerHTML = localStorage.getItem("guardar_categoria");
+_resCantidad.innerHTML = localStorage.getItem("guardar_cantidad");
+_resPrecio.innerHTML = localStorage.getItem("guardar_precio");
