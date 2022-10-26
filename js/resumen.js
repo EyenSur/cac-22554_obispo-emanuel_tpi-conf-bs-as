@@ -18,7 +18,8 @@ let _resPrecio = document.getElementById("res_precio");
 //////////////////////////////////////////////////
 // PRINCIPAL
 
-_resEvento.innerHTML = localStorage.getItem("guardar_evento");
+document.getElementById("res_evento").innerHTML = `Codo a Codo — Conferencia Bs. As.`;
+//_resEvento.innerHTML = localStorage.getItem("guardar_evento");
 _resLugar.innerHTML = localStorage.getItem("guardar_lugar");
 _resFecha.innerHTML = localStorage.getItem("guardar_fecha");
 _resNombre.innerHTML = localStorage.getItem("guardar_nombre");
