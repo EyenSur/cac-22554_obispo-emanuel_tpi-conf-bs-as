@@ -143,17 +143,6 @@ function _reescribirDatos() {
     } else {
         _diaDias = `día`;
     }
-
-    // Reescribir Resumen
-    _resEvento.innerHTML = `${_eventoNombre}`;
-    _resLugar.innerHTML = `${_eventoLugar}`;
-    _resFecha.innerHTML = `${_eventoFecha}`;
-    _resNombre.innerHTML = `${_inputNombre.value}`;
-    _resApellido.innerHTML = `${_inputApellido.value}`;
-    _resCorreo.innerHTML = `${_inputCorreo.value}`;
-    _resCategoria.innerHTML = `${_nombreCateg}`;
-    _resCantidad.innerHTML = `${_inputCantidad.value} ${_diaDias}`;
-    _resPrecio.innerHTML = `$${_totalPagar}`;
 }
 
 function _reiniciarPrecio() {
@@ -163,15 +152,15 @@ function _reiniciarPrecio() {
 
 function _mostrarResumen() {
 
-    localStorage.setItem("evento", _resEvento.innerHTML);
-    localStorage.setItem("lugar", _resLugar.innerHTML);
-    localStorage.setItem("fecha", _resFecha.innerHTML);
-    localStorage.setItem("nombre", _resNombre.innerHTML);
-    localStorage.setItem("apellido", _resApellido.innerHTML);
-    localStorage.setItem("correo", _resCorreo.innerHTML);
-    localStorage.setItem("categoria", _resCategoria.innerHTML);
-    localStorage.setItem("cantidad", _resCantidad.innerHTML);
-    localStorage.setItem("precio", _resPrecio.innerHTML);
+    localStorage.setItem("evento", `${_eventoNombre}`);
+    localStorage.setItem("lugar", `${_eventoLugar}`);
+    localStorage.setItem("fecha", `${_eventoFecha}`);
+    localStorage.setItem("nombre", `${_inputNombre.value}`);
+    localStorage.setItem("apellido", `${_inputApellido.value}`);
+    localStorage.setItem("correo", `${_inputCorreo.value}`);
+    localStorage.setItem("categoria", `${_nombreCateg}`);
+    localStorage.setItem("cantidad", `${_inputCantidad.value} ${_diaDias}`);
+    localStorage.setItem("precio", `$${_totalPagar}`);
 
     window.open("resumen.html", '_blank');
 }
