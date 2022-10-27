@@ -230,6 +230,10 @@ li {
     margin: 0rem 0rem 0rem 0rem;
 }
 
+.alertaFlex {
+    padding: 1rem 0rem;
+}
+
 .resumenFlex {
     margin-left: 3rem;
     margin-top: -1.8rem;
