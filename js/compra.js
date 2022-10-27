@@ -261,7 +261,7 @@ function _mostrarResumen() {
         }
 
         // Cantidad
-        if (_validarCantidad == false) {
+        if (_validarCantidad == false || _inputCantidad.value == ``) {
             _listaCantidad.innerHTML = `• Cantidad`;
         } else {
             _listaCantidad.innerHTML = ``;
