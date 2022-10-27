@@ -12,6 +12,8 @@ let _validarCantidad = false;
 
 let _switchAlerta = false;
 
+let _textoPagar = `Total a Pagar: $${_totalPagar}`;
+
 const _textoOpcion0 = `Estudiante`;
 const _textoOpcion1 = `Trainee`;
 const _textoOpcion2 = `Junior`;
@@ -89,7 +91,7 @@ _opcion0.innerHTML = _textoOpcion0;
 _opcion1.innerHTML = _textoOpcion1;
 _opcion2.innerHTML = _textoOpcion2;
 
-_presentarPrecio.innerHTML = `Total a Pagar: $${_totalPagar}`;
+_presentarPrecio.innerHTML = _textoPagar;
 
 console.log(`Si está leyendo este mensaje, pruebe cambiar la dirección de la página  '/compra2.html'  por  '/compra1.html'  para ver una versión alternativa de esta página.`);
 
@@ -101,7 +103,13 @@ console.log(`Si está leyendo este mensaje, pruebe cambiar la dirección de la p
 
 function _verificarCantidad() {
 
-    if ( (_inputCantidad.value < 1) || (_inputCantidad.value > 5) || isNaN(_inputCantidad.value) || (_inputCantidad.value == _emptyScript) ) {
+    if (_inputCantidad.value === _emptyScript) {
+
+        // No se ha ingresado una cantidad
+        _validarCantidad = false;
+        _mensajeAlerta.innerHTML = _emptyScript;
+
+    } else if ( (_inputCantidad.value < 1) || (_inputCantidad.value > 5) || isNaN(_inputCantidad.value) ) {
 
         _validarCantidad = false;
         _inputCantidad.value = _emptyScript;
@@ -116,6 +124,11 @@ function _verificarCantidad() {
         _validarCantidad = true;
         _mensajeAlerta.innerHTML = _emptyScript;
     }
+}
+
+function _actualizarPrecio() {
+
+    _textoPagar = `Total a Pagar: $${_totalPagar}`;
 }
 
 function _reescribirPrecio() {
@@ -147,8 +160,11 @@ function _reescribirPrecio() {
     // Calcular precio
     _totalPagar = (_precioTicket - (_precioTicket * _descuento)) * _inputCantidad.value;
 
+    // Actualizar string con el precio
+    _actualizarPrecio();
+
     // Presentar precio
-    _presentarPrecio.innerHTML = `Total a Pagar: $${_totalPagar}`;
+    _presentarPrecio.innerHTML = _textoPagar;
 }
 
 function _verificarCorreo() {
@@ -157,7 +173,7 @@ function _verificarCorreo() {
     _inputCorreo.value = document.getElementById("inputCorreo").value;
 
     // Validación del correo
-    if ( (_inputCorreo.value == _ultimoCorreoIngresado) || (_inputCorreo.value == ``) ) {
+    if ( (_inputCorreo.value == _ultimoCorreoIngresado) || (_inputCorreo.value == _emptyScript) ) {
 
         // Si el correo no cambio, no se mostrará el modal de alerta
         _mensajeAlerta.innerHTML = _emptyScript;
@@ -177,18 +193,11 @@ function _verificarCorreo() {
 
         // El correo es válido
         _validarCorreo = true;
-
         _mensajeAlerta.innerHTML = _emptyScript;
     }
 
+    // Actualizar último correo ingresado
     _ultimoCorreoIngresado = _inputCorreo.value;
-}
-
-function _reiniciarPrecio() {
-    _validarCantidad = false;
-    _inputCantidad.value = _emptyScript;
-    _totalPagar = _emptyScript;
-    _presentarPrecio.innerHTML = `Total a Pagar: $${_totalPagar}`;
 }
 
 function _mostrarResumen() {
@@ -259,6 +268,24 @@ function _cambiarDescuento(ev) {
 
     // Cambiar el selector de descuentos al valor correspondiente de la tarjeta cliqueada
     _inputCategoria.value = ev;
+}
+
+function _reiniciarPrecio() {
+
+    // Remover validación del campo cantidad
+    _validarCantidad = false;
+
+    // Limpiar campo cantidad
+    _inputCantidad.value = _emptyScript;
+    
+    // Establecer precio como cero
+    _totalPagar = _emptyScript;
+
+    // Actualizar string con el precio
+    _actualizarPrecio();
+
+    // Presentar precio
+    _presentarPrecio.innerHTML = _textoPagar;
 }
 
 

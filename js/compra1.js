@@ -14,6 +14,8 @@ let _validarCantidad = false;
 
 let _switchAlerta = false;
 
+let _textoPagar = `Total a Pagar: $${_totalPagar}`;
+
 const _textoOpcion0 = `Sin descuento`;
 const _textoOpcion1 = `Estudiante`;
 const _textoOpcion2 = `Trainee`;
@@ -107,7 +109,7 @@ _opcion1.innerHTML = _textoOpcion1;
 _opcion2.innerHTML = _textoOpcion2;
 _opcion3.innerHTML = _textoOpcion3;
 
-_presentarPrecio.innerHTML = `Total a Pagar: $${_totalPagar}`;
+_presentarPrecio.innerHTML = _textoPagar;
 
 console.log(`Dejo todo esto acá es porque me da pena borrarlo y sirve como un recordatorio para cuando vuelva a ver este trabajo.\n `);
 console.log(`Esta es una versión anterior, que había realizado sin leer los requisitos de entrega. Solo me guié por la imagen de ejemplo.\n `);
@@ -126,7 +128,13 @@ console.log(`En la consola se mostrarán los datos recopilados del formulario y 
 
 function _verificarCantidad() {
 
-    if ( (_inputCantidad.value < 1) || (_inputCantidad.value > 3) || isNaN(_inputCantidad.value) || (_inputCantidad.value == _emptyScript) ) {
+    if (_inputCantidad.value === _emptyScript) {
+
+        // No se ha ingresado una cantidad
+        _validarCantidad = false;
+        _mensajeAlerta.innerHTML = _emptyScript;
+
+    } else if ( (_inputCantidad.value < 1) || (_inputCantidad.value > 3) || isNaN(_inputCantidad.value) ) {
 
         _validarCantidad = false;
         _inputCantidad.value = _emptyScript;
@@ -144,6 +152,11 @@ function _verificarCantidad() {
     }
 
     console.log(`Cantidad válida: ${_validarCantidad}\n——————————————————————————————`);
+}
+
+function _actualizarPrecio() {
+
+    _textoPagar = `Total a Pagar: $${_totalPagar}`;
 }
 
 function _reescribirPrecio() {
@@ -201,8 +214,11 @@ function _reescribirPrecio() {
     // Calcular precio
     _totalPagar = (_precioTicket - (_precioTicket * _descuento)) * _inputCantidad.value;
 
+    // Actualizar string con el precio
+    _actualizarPrecio();
+
     // Presentar precio
-    _presentarPrecio.innerHTML = `Total a Pagar: $${_totalPagar}`;
+    _presentarPrecio.innerHTML = _textoPagar;
 
     console.log(`Total a Pagar: (${_precioTicket} - (${_precioTicket} * ${_descuento})) * ${_inputCantidad.value} = ${_totalPagar}\n——————————————————————————————`);
 
@@ -325,14 +341,6 @@ function _mostrarResumen() {
     _switchAlerta = false;
 }
 
-function _reiniciarPrecio() {
-    _validarCantidad = false;
-    _inputCantidad.value = _emptyScript;
-    _totalPagar = _emptyScript;
-    _presentarPrecio.innerHTML = `Total a Pagar: $${_totalPagar}`;
-    console.log("Se limpiaron todos los campos del formulario.\n——————————————————————————————");
-}
-
 function _cerrarModal() {
     console.log("Se cerró el modal de resumen.\n——————————————————————————————");
 }
@@ -344,6 +352,26 @@ function _cambiarDescuento(ev) {
 
     // Reescribir precio al cambiar la categoría a través de una tarjeta
     _reescribirPrecio();
+}
+
+function _reiniciarPrecio() {
+
+    // Remover validación del campo cantidad
+    _validarCantidad = false;
+
+    // Limpiar campo cantidad
+    _inputCantidad.value = _emptyScript;
+    
+    // Establecer precio como cero
+    _totalPagar = _emptyScript;
+
+    // Actualizar string con el precio
+    _actualizarPrecio();
+
+    // Presentar precio
+    _presentarPrecio.innerHTML = _textoPagar;
+
+    console.log("Se limpiaron todos los campos del formulario.\n——————————————————————————————");
 }
 
 
