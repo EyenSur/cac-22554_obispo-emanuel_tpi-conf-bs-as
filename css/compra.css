@@ -12,6 +12,10 @@ a:hover {
     color: white;
 }
 
+li {
+    list-style: none;
+}
+
 
 
 /* BARRA DE NAVEGACIÓN */
@@ -105,7 +109,6 @@ a:hover {
     background-image: linear-gradient(to right, #1C3643, #1E5372);
     height: fit-content;
     padding: 0.7rem 0rem;
-    margin-top: 1.5rem;
 }
 
 .footListSmall a {
@@ -137,7 +140,7 @@ a:hover {
 
 
 
-/* Comprar Tickets */
+/* COMPRAR TICKETS */
 
 .mainBlock {
     margin-top: 6rem;
@@ -171,7 +174,7 @@ a:hover {
 
 
 
-/* Formulario */
+/* FORMULARIO */
 
 .textoFormulario {
     font-size: 1.2rem;
@@ -180,7 +183,7 @@ a:hover {
 .campoBorde {
     border: solid 0.1rem #cfd5db;
     border-radius: 0.3rem;
-    height: 2.5rem;
+    height: 2.8rem;
 }
 
 .cantCateg {
@@ -196,11 +199,11 @@ a:hover {
     color: #0646a9;
 }
 
-.btnFormulario, .btnFormulario:hover {
+.btnFormulario {
     background-color: #97c93e;
-    border: none;
+    border: solid 0.1rem white;
     border-radius: 0.3rem;
-    padding: 15px 32px;
+    padding: 1rem 2rem;
     font-size: 1.2rem;
     font-weight: 600;
     color: white;
@@ -210,9 +213,104 @@ a:hover {
     width: 49%;
 }
 
+.btnFormulario:hover {
+    background-color: white;
+    border: solid 0.1rem #1E5372;
+    color: #1E5372;
+}
 
 
-/* Ancla */
+
+/* MODAL DEL RESUMEN */
+
+.modal {
+    width: 90%;
+    font-weight: 600;
+    color: #444444;
+    margin: 0rem 0rem 0rem 0rem;
+}
+
+.resumenFlex {
+    margin-left: 3rem;
+    margin-top: -1.8rem;
+}
+
+.imgCaC {
+    padding-left: 3rem;
+}
+
+#res_evento {
+    padding-top: 1.5rem;
+}
+
+.flexGrid {
+    display: flex;
+    border-bottom: solid 0.05rem #aaaaaa;
+}
+
+.flexItem1 {
+    flex: 1;
+    padding-bottom: -1rem;
+    margin-bottom: -0.7rem;
+    margin-top: 1rem;
+}
+
+.flexItem2 {
+    flex: 2;
+    padding-bottom: -1rem;
+    margin-bottom: -0.7rem;
+    margin-top: 1rem;
+}
+
+.botonModal {
+    border-radius: 0.3rem;
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: auto;
+}
+
+.btnComprar {
+    background-color: white;
+    border: solid 0.1rem #2fa500;
+    color: #2fa500;
+}
+
+.btnComprar:hover {
+    background-color: #2fa500;
+    color: white;
+}
+
+.btnCancelar {
+    background-color: white;
+    border: solid 0.1rem black;
+    color: black;
+}
+
+.btnCancelar:hover {
+    background-color: black;
+    color: white;
+}
+
+.botonModal:disabled, .botonModal:disabled:hover {
+    background-color: #d2d2d2;
+    border: solid 0.1rem darkgrey;
+    color: darkgrey;
+}
+
+.tooltip-inner {
+    white-space:pre-wrap;
+    padding: 0rem;
+    min-width: 50%;
+    font-size: 1rem;
+}
+
+
+
+/* ANCLA */
 
 .ancla {
     scroll-margin-top: 5rem;
