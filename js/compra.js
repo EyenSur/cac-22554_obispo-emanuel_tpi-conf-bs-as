@@ -208,10 +208,10 @@ function _verificarCorreo() {
 }
 
 function _reiniciarPrecio() {
+    _validarCantidad == false;
+    _inputCantidad.value == ``;
     _totalPagar = ``;
     _presentarPrecio.innerHTML = `Total a Pagar: $${_totalPagar}`;
-
-    _inputCantidad.style.accentColor = `0060df`;
 }
 
 function _mostrarResumen() {
