@@ -337,6 +337,15 @@ function _cerrarModal() {
     console.log("Se cerró el modal de resumen.\n——————————————————————————————");
 }
 
+function _cambiarDescuento(ev) {
+
+    // Cambiar el selector de descuentos al valor correspondiente de la tarjeta cliqueada
+    _inputCategoria.value = ev;
+
+    // Reescribir precio al cambiar la categoría a través de una tarjeta
+    _reescribirPrecio();
+}
+
 
 
 //////////////////////////////////////////////////

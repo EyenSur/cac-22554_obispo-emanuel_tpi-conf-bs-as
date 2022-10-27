@@ -10,6 +10,8 @@ let _ultimoCorreoIngresado;
 let _validarCorreo = false;
 let _validarCantidad = false;
 
+let _switchAlerta = false;
+
 const _textoOpcion0 = `Estudiante`;
 const _textoOpcion1 = `Trainee`;
 const _textoOpcion2 = `Junior`;
@@ -30,6 +32,7 @@ const _descuentoC = 15;     // Descuento de 15%
 
 const _categA = 0;
 const _categB = 1;
+const _categC = 2;
 
 const _formatoCorreo = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -53,6 +56,10 @@ let _listaNombre = document.getElementById("listaNombre");
 let _listaApellido = document.getElementById("listaApellido");
 let _listaCorreo = document.getElementById("listaCorreo");
 let _listaCantidad = document.getElementById("listaCantidad");
+
+let _btnDescuentoA = document.getElementById("btnDescuentoA");
+let _btnDescuentoB = document.getElementById("btnDescuentoB");
+let _btnDescuentoC = document.getElementById("btnDescuentoC");
 
 
 
@@ -246,6 +253,12 @@ function _mostrarResumen() {
     }
 
     _switchAlerta = false;
+}
+
+function _cambiarDescuento(ev) {
+
+    // Cambiar el selector de descuentos al valor correspondiente de la tarjeta cliqueada
+    _inputCategoria.value = ev;
 }
 
 
