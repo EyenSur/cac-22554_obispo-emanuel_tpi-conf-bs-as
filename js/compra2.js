@@ -12,8 +12,6 @@ let _validarCantidad = false;
 
 let _switchAlerta = false;
 
-let _textoPagar = `Total a Pagar: $${_totalPagar}`;
-
 const _textoOpcion0 = `Estudiante`;
 const _textoOpcion1 = `Trainee`;
 const _textoOpcion2 = `Junior`;
@@ -91,8 +89,6 @@ _opcion0.innerHTML = _textoOpcion0;
 _opcion1.innerHTML = _textoOpcion1;
 _opcion2.innerHTML = _textoOpcion2;
 
-_presentarPrecio.innerHTML = _textoPagar;
-
 console.log(`Si está leyendo este mensaje, pruebe cambiar la dirección de la página  '/compra2.html'  por  '/compra1.html'  para ver una versión alternativa de esta página.`);
 
 
@@ -128,7 +124,7 @@ function _verificarCantidad() {
 
 function _actualizarPrecio() {
 
-    _textoPagar = `Total a Pagar: $${_totalPagar}`;
+    _presentarPrecio.innerHTML = `Total a Pagar: $${_totalPagar}`;
 }
 
 function _reescribirPrecio() {
@@ -162,9 +158,6 @@ function _reescribirPrecio() {
 
     // Actualizar string con el precio
     _actualizarPrecio();
-
-    // Presentar precio
-    _presentarPrecio.innerHTML = _textoPagar;
 }
 
 function _verificarCorreo() {
@@ -248,17 +241,6 @@ function _mostrarResumen() {
 
         // Modal para mostrar cuantos campos faltan completar
         _modalFalta.show();
-
-        /*
-        // Cantidad
-        if (_validarCantidad == false || _inputCantidad.value == _emptyScript) {
-
-            _mensajeAlerta.innerHTML = _alertaCantidadCompletar;
-            _modal.show();
-
-        } else {
-            _mensajeAlerta.innerHTML = _emptyScript;
-        } */
     }
 
     _switchAlerta = false;
@@ -283,9 +265,6 @@ function _reiniciarPrecio() {
 
     // Actualizar string con el precio
     _actualizarPrecio();
-
-    // Presentar precio
-    _presentarPrecio.innerHTML = _textoPagar;
 }
 
 
@@ -300,3 +279,5 @@ _inputCantidad.onkeyup = _verificarCantidad;
 
 // Agregar texto a la etiqueta title de un tooltip popup
 _inputCantidad.title = _popUpCantidad;
+
+_actualizarPrecio();
